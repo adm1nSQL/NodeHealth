@@ -15,7 +15,7 @@ jobs:
 
     - name: Download File
       run: |
-        curl -LJO https://sub.183tk.tk/mihomo
+        curl -LJO sub.183tk.tk/mihomo
         # 替换上述URL为你需要下载文件的实际地址
 
     - name: Setup Git LFS
@@ -28,7 +28,7 @@ jobs:
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-        git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/${{ github.repository }}
+        git remote set-url origin https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}
         
         git add .
         git commit -m "Add downloaded file"
