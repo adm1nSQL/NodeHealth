@@ -7,7 +7,7 @@
 from clash import *
 import schedule
 
-print('Node Health Monitor Start')
+print('节点检测程序开始运行')
 headers = {'User-Agent': 'ClashforWindows/0.18.1'}
 
 
@@ -37,7 +37,7 @@ def job():
     clash.stop_client()
 
 
-schedule.every(30).minutes.do(job)
+schedule.every(0.2).minutes.do(job)
 while True:
     schedule.run_pending()
     sleep(3)
