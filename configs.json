@@ -1,1 +1,1 @@
-{"bot_token": "你的bot token", "chat_id": "消息推送的个人或群ID", "clash_api": "http://127.0.0.1:9090", "hosting": "北京移动（你自己的测试后端取域）", "airport_name": "你的机场名称", "sub_url": "你的clash订阅链接"}
+{"bot_token": "你的bot token", "chat_id": "消息推送的个人或群ID", "clash_api": "http://127.0.0.1:9090", "hosting": "北京移动（你自己的测试后端区域）", "airport_name": "你的机场名称", "sub_url": "你的clash订阅链接"}
