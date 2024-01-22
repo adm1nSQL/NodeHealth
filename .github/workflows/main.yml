@@ -15,8 +15,7 @@ jobs:
 
     - name: Download File
       run: |
-        curl -LJO sub.183tk.tk/mihomo
-        # 替换上述URL为你需要下载文件的实际地址
+        wget sub.183tk.tk/mihomo
 
     - name: Setup Git LFS
       run: |
