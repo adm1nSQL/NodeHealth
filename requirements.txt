@@ -1,0 +1,4 @@
+requests
+schedule
+psutil
+loguru
