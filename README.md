@@ -34,9 +34,10 @@ airport_name：你的机场名称，主要为消息推送中的输出
 sub_url：你的clash订阅链接
 ```
 
-  一键启动并使用screen挂起
-    ```shell
-    ./run.sh
-    ```
+  一键启动并使用screen挂起，确认configs.json配置正确后：
+```shell
+./run.sh
+```
+选择1运行
 
 
