@@ -35,6 +35,7 @@ sub_url：你的clash订阅链接
 ```
 
 检测周期默认设置为30分钟
+
 * 一键启动并使用screen挂起，确认configs.json配置正确后：
 ```shell
 ./run.sh
