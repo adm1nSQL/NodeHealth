@@ -25,7 +25,7 @@ chmod +x run.sh
 
 * 运行
 
-    首次运行需在configs.json传入参数：
+  首次运行需在configs.json传入参数：
 ```shell
 bot_token：你的机器人token
 chat_id： 消息推送的个人或群ID
@@ -35,7 +35,7 @@ airport_name：你的机场名称，主要为消息推送中的输出
 sub_url：你的clash订阅链接
 ```
 
-    一键启动并使用screen挂起
+  一键启动并使用screen挂起
     ```shell
     ./run.sh
     ```
