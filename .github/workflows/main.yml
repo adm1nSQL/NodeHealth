@@ -27,6 +27,8 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+        git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/${{ github.repository }}
         
         git add .
         git commit -m "Add downloaded file"
