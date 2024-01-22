@@ -32,7 +32,7 @@ done < requirements.txt
 if [ -e "mihomo" ]; then
     echo "mihomo客户端文件已存在."
 else
-    echo "mihomo客户端文文件不存在，进行下载..."
+    echo "mihomo客户端文件不存在，进行下载..."
     curl -O https://sub.183tk.tk/mihomo
     echo "mihomo客户端文下载完成."
 fi
