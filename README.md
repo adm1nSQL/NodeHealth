@@ -28,7 +28,7 @@ chmod +x run.sh
 ```shell
 bot_token：你的机器人token
 chat_id： 消息推送的个人或群ID
-clash_api： http://127.0.0.1:9090，端口通常为9090，需根据你的实际配置文件修改，clash配置文件中external-controller指定的端口
+clash_api： http://127.0.0.1:9090，端口通常为9090，根据你的配置文件修改，为external-controller指定的端口
 hosting：测试后端名称，例如：北京电信
 airport_name：你的机场名称，主要为消息推送中的输出
 sub_url：你的clash订阅链接
