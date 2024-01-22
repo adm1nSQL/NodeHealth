@@ -11,7 +11,7 @@
     这步不会请Google。
 * 动动你的小手拉取本项目的源码
 ```shell
-apt install -y git && git clone https://github.com/adm1nSQL/Sub_Manger.git && cd Sub_Manger
+apt install -y git && git clone https://github.com/adm1nSQL/NodeHealth.git && cd NodeHealth
 ```
 
 * 安装依赖 Python 3.6 以上
