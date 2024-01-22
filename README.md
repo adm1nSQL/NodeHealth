@@ -1,6 +1,6 @@
 # NodeHealth
 
-一个用 Telegram bot api 来对订阅节点进行定时检测的程序，基于[mihomo(clash meta)]([https://t.me/BotFather](https://github.com/MetaCubeX/mihomo/releases))
+一个用 Telegram bot api 来对订阅节点进行定时检测的程序，基于[mihomo-clash meta]([https://t.me/BotFather](https://github.com/MetaCubeX/mihomo/releases))
 
 ## 快速开始
 
