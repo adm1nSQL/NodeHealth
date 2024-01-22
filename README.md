@@ -23,7 +23,7 @@ apt install -y git && git clone https://github.com/adm1nSQL/NodeHealth.git && cd
 chmod +x run.sh
 ```
 
-* 首次运行需在configs.json传入参数：
+* 首次运行需在configs.json修改你的实际参数：
 
 ```shell
 bot_token：你的机器人token
