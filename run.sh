@@ -19,6 +19,12 @@ if ! command -v curl &> /dev/null; then
     sudo apt install -y curl
 fi
 
+# 检查 screen 是否已安装，如果不存在则尝试安装
+if ! command -v screen &> /dev/null; then
+    echo "未安装 screen，尝试安装..."
+    sudo apt install -y screen
+fi
+
 echo "检查并安装依赖项..."
 while read -r package; do
     if pip3 show "$package" &> /dev/null; then
@@ -32,7 +38,7 @@ done < requirements.txt
 if [ -e "mihomo" ]; then
     echo "mihomo客户端文件已存在."
 else
-    echo "mihomo客户端文件不存在，进行下载..."
+    echo "mihomo客户端文文件不存在，进行下载..."
     curl -O https://sub.183tk.tk/mihomo
     echo "mihomo客户端文下载完成."
 fi
