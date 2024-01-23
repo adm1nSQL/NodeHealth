@@ -1,7 +1,6 @@
 import os
 import subprocess
 import sys
-import time
 import signal
 import psutil
 from function import *
@@ -21,7 +20,7 @@ class Clash(object):
             client = f'{os.getcwd()}/mihomo'
             self._process = subprocess.Popen([f"{client}", '-f', './sub.yaml'], text=True)
             logger.info("启动mihomo客户端")
-            time.sleep(30)
+            sleep(30)
         except Exception as e:
             logger.error(str(e))
             sys.exit(1)
