@@ -54,6 +54,7 @@ class Clash(object):
 
 
 if __name__ == '__main__':
-    clash = Clash()
-    clash.start_client()
-    clash.stop_client()
+    pass
+    # clash = Clash()
+    # clash.start_client()
+    # clash.stop_client()
