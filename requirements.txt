@@ -1,4 +1,6 @@
 requests
 schedule
 psutil
+subprocess
+signal
 loguru
