@@ -33,11 +33,11 @@ class Clash(object):
         self._before_stop_client()
         if self._process is not None:
             self._process.send_signal(signal.SIGINT)
-            # 等待进程退出
-            self._process.wait()
-            self._process = None
             self._check_and_terminate_process(self, 7890)
             self._check_and_terminate_process(self, 9090)
+            # 等待进程退出
+            self._process.wait()
+            self._process = None      
             logger.info("Client Stop!")
 
     @staticmethod
