@@ -23,7 +23,7 @@ def send_message(text):
         'parse_mode': 'MarkdownV2'
     }
     try:
-        res = requests.post(f'https://api.telegram.org/bot{bot_token}/sendMessage', json=message_data)
+        res = requests.post(f'https://api.telegram.org/bot{bot_token}/sendMessage', json=message_data, proxies={"http" : "http://127.0.0.1:7890"})
         if res.status_code == 200:
             logger.info(res.json())
     except Exception as e:
