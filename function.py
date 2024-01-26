@@ -14,6 +14,10 @@ airport_name = confs['airport_name']
 hosting = confs['hosting']
 
 fail_node = []
+proxies = {
+    'http': 'http://127.0.0.1:10809',
+    'https': 'http://127.0.0.1:10809',
+}
 
 
 def send_message(text):
@@ -23,7 +27,7 @@ def send_message(text):
         'parse_mode': 'MarkdownV2'
     }
     try:
-        res = requests.post(f'https://api.telegram.org/bot{bot_token}/sendMessage', json=message_data, proxies={"http" : "http://127.0.0.1:7890"})
+        res = requests.post(f'https://api.telegram.org/bot{bot_token}/sendMessage', json=message_data, proxies=proxies)
         if res.status_code == 200:
             logger.info(res.json())
     except Exception as e:
