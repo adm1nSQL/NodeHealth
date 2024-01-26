@@ -11,6 +11,26 @@ print('节点检测程序开始运行')
 headers = {'User-Agent': 'ClashforWindows/0.18.1'}
 
 
+def download_geoip_metadb(directory):
+    file_path = os.path.join(directory, 'geoip.metadb')
+    url = 'https://file.xn--4gqs5ymhk43c.eu.org/geoip.metadb'
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    if not os.path.exists(file_path):
+        try:
+            resp = requests.get(url).content
+            with open(file_path, 'wb') as f:
+                f.write(resp)
+            logger.info(f'成功下载 geoip.metadb 文件到 {directory}')
+        except Exception as e:
+            logger.error(f'下载 geoip.metadb 文件失败！\n{str(e)}')
+            return e
+    else:
+        pass
+        
+
 def job():
     try:
         resp = requests.get(url=sub_url, headers=headers).content
