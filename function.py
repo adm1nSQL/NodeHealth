@@ -15,8 +15,8 @@ hosting = confs['hosting']
 
 fail_node = []
 proxies = {
-    'http': 'http://127.0.0.1:10809',
-    'https': 'http://127.0.0.1:10809',
+    'http': 'http://127.0.0.1:7890',
+    'https': 'http://127.0.0.1:7890',
 }
 
 
