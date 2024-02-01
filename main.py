@@ -7,7 +7,19 @@
 from clash import *
 import schedule
 
-print('节点检测程序开始运行')
+
+banner = """
+ ________  ________  ________  ________  ________  ____  ____   _____   
+|_   __  ||_   __  ||_   __  ||_   __  ||_   __  ||_  _||_  _| / ___ `. 
+  | |_ \_|  | |_ \_|  | |_ \_|  | |_ \_|  | |_ \_|  \ \  / /  |_/___) | 
+  |  _|     |  _|     |  _|     |  _|     |  _|      > `' <    .'____.' 
+ _| |_     _| |_     _| |_     _| |_     _| |_     _/ /'`\ \_ / /_____  
+|_____|   |_____|   |_____|   |_____|   |_____|   |____||____||_______| 
+
+TG频道 @fffffx2                                                           
+"""
+
+print(banner + '\n节点检测程序开始运行')
 headers = {'User-Agent': 'ClashforWindows/0.18.1'}
 
 
@@ -29,9 +41,34 @@ def download_geoip_metadb(directory):
             return e
     else:
         pass
-        
+
+
+def download_client(directory):
+    file_path = os.path.join(directory, 'mihomo')
+    url = 'https://file.xn--4gqs5ymhk43c.eu.org/mihomo'
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    if not os.path.exists(file_path):
+        try:
+            resp = requests.get(url).content
+            with open(file_path, 'wb') as f:
+                f.write(resp)
+            logger.info(f'成功下载 mihomo 客户端到 {directory}')
+        except Exception as e:
+            logger.error(f'下载 mihomo 客户端失败！\n{str(e)}')
+            return e
+    else:
+        pass
+
 
 def job():
+    mihomo_dir = f'{os.getcwd()}'
+    download_client(mihomo_dir)
+
+    geoip_dir = '/root/.config/mihomo'
+    download_geoip_metadb(geoip_dir)
     try:
         resp = requests.get(url=sub_url, headers=headers).content
         if resp is not None:
