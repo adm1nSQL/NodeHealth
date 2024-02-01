@@ -47,9 +47,6 @@ def download_client(directory):
     file_path = os.path.join(directory, 'mihomo')
     url = 'https://file.xn--4gqs5ymhk43c.eu.org/mihomo'
 
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-
     if not os.path.exists(file_path):
         try:
             resp = requests.get(url).content
