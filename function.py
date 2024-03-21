@@ -39,6 +39,7 @@ def send_message(text):
 
 def test_proxies():
     try:
+        fail_node.clear()
         resp = requests.get(f"{clash_api}/providers/proxies")
         data = resp.json()['providers']['自动选择']['proxies']
         resp.close()
