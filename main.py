@@ -91,6 +91,7 @@ def job():
     clash.stop_client()
 
 
+job()
 schedule.every(30).minutes.do(job)
 while True:
     schedule.run_pending()
