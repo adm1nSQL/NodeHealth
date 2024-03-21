@@ -10,7 +10,7 @@ bot_token = confs['bot_token']
 chat_id = confs['chat_id']
 clash_api = confs['clash_api']
 sub_url = confs['sub_url']
-airport_name = confs['airport_name']
+airport_name = confs['airport_name'].replace('-', '\\')
 hosting = confs['hosting']
 
 fail_node = []
@@ -30,6 +30,9 @@ def send_message(text):
         res = requests.post(f'https://api.telegram.org/bot{bot_token}/sendMessage', json=message_data, proxies=proxies)
         if res.status_code == 200:
             logger.info(res.json())
+        else:
+            logger.warning('发送通知信息失败：')
+            logger.warning(res.json())
     except Exception as e:
         logger.error(e)
 
@@ -47,5 +50,5 @@ def test_proxies():
                 fail_node.append(''.join(node_name))
         return len(data)
     except Exception as e:
-        logger.info(f"数据获取发生错误：{e}")
+        logger.warning(f"数据获取发生错误：{e}")
         sleep(3)
